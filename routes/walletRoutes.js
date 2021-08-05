@@ -99,6 +99,7 @@ router.patch( "/:_id", ( req, res ) => {
                     item._id = item._id.toString();
                 } );
             }
+            console.log( walletObj );
             const { error } = walletValidation( walletObj );
             if ( error ) {
                 console.log( error );

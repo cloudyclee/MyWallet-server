@@ -54,7 +54,7 @@ const walletValidation = ( data ) => {
             amount: Joi.number().required(),
             transType: Joi.string().required().valid( "expense", "income" ),
             consumeType: Joi.string().required(),
-            note: Joi.string().max( 100 )
+            note: Joi.string().max( 100 ).allow( "" )
         } ),
         totalAmounts: Joi.number(),
         walletUserID: Joi.objectId(),
